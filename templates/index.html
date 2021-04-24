@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>To do list</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="tasks-form">
+        <form id="form-new-task" action="#">
+            <label for="new-task">New task</label>
+            <input type="text" id="new-task" name="new task" placeholder="enter task">
+        </form>
+        <h2 style="text-align: center; padding: 20px">Tasks</h2>
+        <ul id="task-list">
+            {% for task in tasks %}
+            <li task_id="{{ task["id"] }}">
+                <span>{{ task["name"] }}</span>
+                <input type="checkbox" class="done-checkbox" id="{{ task.id }}" {{ "checked" if task["done"] }}>
+                <label for="{{ task.id }}" class="checkbox-label">
+                    <div>✔</div>
+                </label>
+                <button>x</button>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<script src="{{url_for('static', filename='app.js')}}"></script>
+</body>
+</html>

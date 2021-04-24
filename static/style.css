@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.done-checkbox{
+    visibility: hidden;
+}
+
+.checkbox-label div{
+    display: inline-block;
+}
+
+.checkbox-label{
+    display: inline-block;
+    border: #C3C3C3 1px solid;
+}
+
+.done-checkbox:checked + .checkbox-label div{
+    visibility: visible;
+}
+
+.done-checkbox:not(:checked):hover + .checkbox-label div{
+    visibility: visible;
+    color: white;
+    background-color: #C3C3C3;
+}
+
+.done-checkbox + .checkbox-label div{
+    visibility: hidden;
+}
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tasks-form{
+    width: 700px;
+}
+
+#form-new-task{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+#form-new-task label{
+    padding: 0 10px;
+    flex: 1;
+}
+
+#form-new-task input{
+    padding: 10px 10px;
+    flex: 5;
+    border: #C3C3C3 1px solid;
+    border-radius: 5px;
+}
+
+#task-list{
+    text-align: center;
+    list-style: none;
+}
+
+#task-list li{
+    border-bottom: #C3C3C3 1px solid;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#task-list li label{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#task-list li label div{
+    width: 100%;
+    height: 100%;
+}
+
+#task-list li button{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 10px;
+}
+
+#task-list li:hover{
+    border-bottom: #9c9c9c 1px solid;
+}
