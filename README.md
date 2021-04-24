@@ -2,7 +2,7 @@
 
 A simple to do list
 
-Technolodgy stack:
+Technology stack:
 
 1. JS DOM manipulation and styling
 2. Python Flask server
